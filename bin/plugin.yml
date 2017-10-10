@@ -1,0 +1,18 @@
+main: me.razermc.CommandInterface.Main
+name: CommandInterface
+author: RAZERMC
+description: An interface for commands, removing the need to type commands
+version: 1.0
+softdepends: [Vault]
+commands:
+  coin:
+    description: Main command for CommandInterface
+    
+permissions:
+  coin.use:
+    default: op
+  coin.reload:
+    default: op
+  coin.list:
+    default: op
+    

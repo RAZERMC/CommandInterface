@@ -1,0 +1,20 @@
+menuName: anotherMenu
+menuDisplayName: '&4&lANOTHER &1&lMENU'
+
+Menu:
+  sampleItem1:
+    name: '&6&lGo back to main menu!'
+    type: CHEST
+    amount: 1
+    durability: 0 
+    lore:
+      - '&aThis button opens another menu'
+    inventoryPosition: 5
+    function: menu
+    menuName: sampleMenu
+    commands:
+      - ''
+    permission: none
+    closeMenu: false
+    price: 100
+    message: 'Openning another menu.....'

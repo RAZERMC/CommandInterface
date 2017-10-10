@@ -1,0 +1,39 @@
+#Player Selection Gui settings
+#Plugin Placeholders
+#%cPlayer% will be replaced by the player clicking the menu
+#%cHead% will be replaced by head on the Player selection menu
+#%cInput% will be replaced by clicked head on the Player selection menu
+menuTitle: '&1&lPlayer Selection'
+headLores:
+  - '&aIP address: %player_ip%'
+  - '&aEXP Level: %player_level%'
+  - '&aHealth: %player_health% / %player_max_health%'
+  - '&a%cInput% is in %player_gamemode% game mode'
+#inventory click cool down settings 
+#Adjust cool down speed to your preference lowest is 1 
+clickCooldownEnabled: false
+clickCooldown: 20 
+closeMenuOnCooldown: false 
+#press F key to open menu
+#This feature is for server version 1.9 and up only
+#There two modes for the F key, Menu and Command
+#Menu mode = opens a menu you define
+#Command mode = runs command in console, put -c- at the start of the command to run it as console
+#Set the FKeyPrice to 0 if you want it to be free 
+FKeyEnabled: false
+FKeyMode: menu 
+FKeyMenu: sampleMenu
+FKeyCommand: 
+  - '-c- bc This server is cool!'
+  - 'say Support us by voting!'
+FKeyPrice: 100
+#Economy settings
+economyEnabled: false
+#if set to true there will be no message in chat from this plugin except from the menu
+silentMode: false
+#Set to true if you want to hide items that players have no permission
+hideItemsWithNoPermission: false
+
+
+ 
+

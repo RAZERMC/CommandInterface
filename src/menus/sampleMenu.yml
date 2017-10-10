@@ -1,0 +1,118 @@
+#Plugin Placeholders
+#%cPlayer% will be replaced by the player clicking the menu
+#%cInput% will be replaced by clicked head on the Player selection menu
+#%cPrice% will be replace by the item price in the menu
+#item name, lores and commands supports color coding
+
+#The name of the menu
+menuName: sampleMenu
+#The title shown on the menu
+menuDisplayName: '&4&lCOMMAND &6&lMENU'
+
+Menu:
+  sampleItem1:
+    #Sets the display name of the item
+    name: '&6&lConsole and Player Command'
+    #You can get your item here
+    #https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+    type: WOOL
+    #The amount of an item in a stack
+    amount: 1
+    #The item type sub type. Example is to color the wool red you need the durability 14
+    durability: 14 
+    #The item lores 
+    lore:
+      - '&aThis button executes 2 commands'
+      - '&aCommand in console is to use the essentials'
+      - '&acommand broadcast, the other command is' 
+      - '&aPlayer command.'
+      - '&6PlaceholderAPI Support'
+      - '&aServer TPS: %server_tps%'
+      - '&6Economy Support'
+      - '&aThis item price: %cPrice%'
+    inventoryPosition: 11
+    #There are 3 function available
+    #none defaults to command execution
+    #player will open the player selection menu
+    #menu will open another menu you define
+    function: none
+    menuName: put menu name here
+    #put -c- on the beginning of the command and add a space to execute it as console
+    #you can add as many commands as you want
+    commands:
+      - '-c- bc %cPlayer% is cool! (this is a test console command)' 
+      - 'say %cPlayer% is coolest! (this is a test player command)'
+    #set your own permission for this item. you can use any permission node
+    #set to none if no permission is set
+    permission: none
+    #Set to true if you want to close menu after clicking an item
+    closeMenu: false
+    #set price to 0 if you want to be free
+    price: 100
+    #You can send message to player supports placeholders and color
+    message: 'Clicked item'
+ 
+#Example of opening the player selection gui
+#The %cInput% will be replace by the clicked head on the player selection menu 
+  sampleItem2:
+    name: '&6&lPlayer Selection'
+    type: SKULL_ITEM
+    amount: 1
+    durability: 3 
+    lore:
+      - '&aThis button executes 2 commands'
+      - '&aCommand in console is to use the essentials'
+      - '&acommand broadcast, the other command is' 
+      - '&aPlayer command. But will open the player'
+      - '&aselection menu first'
+      - '&6Economy Support'
+      - '&aThis item price: %cPrice%'
+    inventoryPosition: 14
+    function: player
+    commands:
+      - '-c- bc %cPlayer% and %cInput% are cool! (this is a test console command)' 
+      - 'say %cPlayer% is cooler than %cInput% (this is a test player command)'
+    permission: none
+    closeMenu: false
+    price: 100
+    message: 'Clicked item'
+    
+#Example of opening another menu
+  sampleItem3:
+    name: '&6&lAnother Menu'
+    type: CHEST
+    amount: 1
+    durability: 0 
+    lore:
+      - '&aThis button opens another menu'
+      - '&6Economy Support'
+      - '&aThis item price: %cPrice%'
+    inventoryPosition: 17
+    function: menu
+    menuName: anotherMenu
+    commands:
+      - ''
+    permission: none
+    closeMenu: false
+    price: 100
+    message: 'Openning another menu.....'
+    
+#Example of opening another menu
+  sampleItem4:
+    name: '&6&lExit Menu'
+    type: ARROW
+    amount: 1
+    durability: 0 
+    lore:
+      - '&aThis button exits the menu'
+      - '&6Economy Support'
+      - '&aThis item price: %cPrice%'
+    inventoryPosition: 27
+    function: none
+    menuName: anotherMenu
+    commands:
+      - ''
+    permission: none
+    closeMenu: true
+    price: 100
+    message: 'Openning another menu.....'
